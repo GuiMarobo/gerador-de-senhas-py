@@ -19,33 +19,39 @@ def gerar_senha_gui():
 
 janela = tk.Tk()
 janela.title('Gerador de Senhas - by: @GuiMarobo')
-janela.geometry("400x400")
-janela.config(bg="#f0f0f0")
+janela.geometry("400x350")
+janela.config(bg="#111111")
  
-titulo = tk.Label(janela, text='Gerador de Senhas', font=('Arial', 16, "bold"), bg="#f0f0f0")
-titulo.grid(row=0, column=0, columnspan=2, pady=10)
+titulo = tk.Label(
+    janela, text="Gerador de Senhas", font=("Arial", 18, "bold"), fg="#f5fffb", bg="#111111"
+)
+titulo.pack(pady=10)
 
 usar_maiusculas = tk.BooleanVar()
 usar_minusculas = tk.BooleanVar()
 usar_numeros = tk.BooleanVar()
 usar_simbolos = tk.BooleanVar()
 
-check_maiusculas = tk.Checkbutton(janela, text='Usar maiúsculas', variable=usar_maiusculas)
-check_maiusculas.grid(row=1, column=0, sticky="w", padx=10)
+check_maiusculas = tk.Checkbutton(janela, text='Usar maiúsculas', variable=usar_maiusculas, bg="#111111")
+check_maiusculas.pack(anchor="w")
 
-check_minusculas = tk.Checkbutton(janela, text='Usar minúsculas', variable=usar_minusculas)
-check_minusculas.grid(row=2, column=0, sticky="w", padx=10)
+check_minusculas = tk.Checkbutton(janela, text='Usar minúsculas', variable=usar_minusculas, bg="#111111")
+check_minusculas.pack(anchor="w")
 
-check_numeros = tk.Checkbutton(janela, text='Usar números', variable=usar_numeros)
-check_numeros.grid(row=3, column=0, sticky="w", padx=10)
+check_numeros = tk.Checkbutton(janela, text='Usar números', variable=usar_numeros, bg="#111111")
+check_numeros.pack(anchor="w")
 
-check_simbolos = tk.Checkbutton(janela, text='Usar símbolos', variable=usar_simbolos)
-check_simbolos.grid(row=4, column=0, sticky="w", padx=10)
+check_simbolos = tk.Checkbutton(janela, text='Usar símbolos', variable=usar_simbolos, bg="#111111")
+check_simbolos.pack(anchor="w")
 
-resultado = tk.Label(janela, text="Sua senha aparecerá aqui", font=("Arial", 14), fg="blue", bg="#f0f0f0")
-resultado.grid(row=5, column=0, columnspan=2, pady=20)
+resultado = tk.Label(janela, text="Sua senha aparecerá aqui", font=("Arial", 14, "bold"), fg="#0077cc", bg="#111111")
+resultado.pack(pady=20)
 
-botao_gerar = tk.Button(janela, text="Gerar Senha", command=gerar_senha_gui)
-botao_gerar.grid(row=6, column=0, columnspan=2, pady=10)
+botao_gerar = tk.Button(
+    janela, text="Gerar Senha", command=gerar_senha_gui,
+    font=("Arial", 14, "bold"), bg="#4CAF50", fg="black",
+    padx = 10, pady = 5, relief="raised", borderwidth=3
+)
+botao_gerar.pack(pady=10)
 
 janela.mainloop()
