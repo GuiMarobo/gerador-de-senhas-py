@@ -3,7 +3,7 @@
 import random
 import string
 
-def gerar_senha(usar_maiusculas, usar_minusculas, usar_numeros, usar_simbolos):
+def gerar_senha(usar_maiusculas, usar_minusculas, usar_numeros, usar_simbolos, tamanho):
     caracteres = ""
 
     if usar_maiusculas:
@@ -21,6 +21,6 @@ def gerar_senha(usar_maiusculas, usar_minusculas, usar_numeros, usar_simbolos):
     if not caracteres:
         return None
 
-    senha_gerada = ''.join(random.choices(caracteres, k=12))
+    senha_gerada = ''.join(random.choices(caracteres, k=tamanho))
     return senha_gerada
 
