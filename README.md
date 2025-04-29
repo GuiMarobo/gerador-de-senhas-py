@@ -1,5 +1,5 @@
 # Gerador de Senhas - Python
-Projeto para aprender a utilizar o TKINTER e explorar um pouco de PYTHON.
+Projeto muito simples, apenas para aprender a utilizar o TKINTER e utilizar um pouco de PYTHON.
 
 # Para executar:
 - Clone o repositório
